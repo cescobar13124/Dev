@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<title>CIS 486</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="styles.css">
+
+</head>
+<style>
+.mySlides {display:none}
+.w3-left, .w3-right, .w3-badge {cursor:pointer}
+.w3-badge {height:13px;width:13px;padding:0}
+</style>
+
+<body>
+
+<div class="header">
+  <h1>Welcome to CIS 486</h1>
+  <p>Everything you need for this class!</p>
+</div>
+
+<div class="topnav">
+  <a href="dev-instructions.html">Dev Instructions</a>
+  <a href="dev-profiles.html">Dev Profiles</a>
+  <a href="cumbies-memes.html">Cumbie's memes</a>
+  <a href="course-content.html">Course Content</a>
+</div>
+
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2>Hello Developers!</h2>
+      <h5>Welcome to your IT/IS Capstone Projects course for this Spring 2021 Semester. A few things to note:</h5>
+      <p>CNVS is just fine as a Course Management tool (grades, assignments, & communication) but 99% of our work and interaction will 	be using GitHub. We will operate using a "half in class, half in Zoom on Tuesday & then switch on Thursday" model. After the first 	couple o' days we will be in a primarily flipped environment: watch a video or complete a task & then we all meet during class time 	to work, discuss, collaborate. </p>
+      <p>While in Class:</p>
+      <p>Bring some headphones/earbuds. You will be signed into Zoom during class too so you can chat and breakout with the Zoomland people.</p>
+       <p>While on Zoom:</p>
+       <p>Plan to have your video on, audio available. Our class time isn't time for driving, work, or otherwise. As we go,we can switch up which days you attend and we have a lot of flexibility. Let's just get going and we can work it all out together.</p>
+       <p>Here's to a happy & productive class!</p>
+    </div>
+    <div class="card">
+      <h2>Course Objectives:</h2>
+      <h5>The objectives of this course are for students to:</h5>
+      <ol>
+        <li>Analyze a complex computing problem, and to apply principles of computing and other relevant disciplines to identify solutions.</li>
+        <li>Design, implement, and evaluate a computing-based solution to meet a given set of computing requirements in the context of the program’s discipline.</li>
+        <li>Communicate effectively in a variety of professional contexts.</li>
+	<li>Recognize professional responsibilities and make informed judgments in computing practice based on legal and ethical principles.</li>
+	<li>Function effectively as a member or leader of a team engaged in activities appropriate to the program’s discipline.</li></br>
+	<p>For CIS Majors only:</p>
+	<li>Support the delivery, use, and management of information systems within an information systems environment.</li></br>
+	<p>For IT Majors only: </p>
+	<li>Identify and analyze user needs and to take them into account in the selection, creation, integration, evaluation, and administration of computing-based systems.</li>
+      </ol>
+    </div>
+  </div>
+  <div class="rightcolumn">
+    <div class="card">
+      <h2>Contact</h2>
+      <img src="profile_thumb.jpeg" alt="CUMBIE" width="100" height="100" style="border:5px black">
+      <p>Barry Cumbie, Ph.D.</p>
+       <p>Associate Professor, Computer Science and Information Systems</p>
+        <p> bcumbie@una.edu</p>
+	 <p>(256) 765-4873</p>
+	  <p>Keller Hall #249 </p>
+    </div>
+    
+    <div class="card">
+      <h3>Class Attendance</h3>
+      <h5>Current Alternating Class / Zoom Schedule</h5></br>
+      <p>TUESDAY:</p>
+      <p>Alsup, Daffinson, Dill, Escobar, Garg, Hammond, Harris, Helfert, Homan, Mitchell, Sevigne, Sherrill, Taylor</p>
+      <p>THURSDAY:</p>
+      <p>Davis, Estacio, Humphrey, Nguyen, Noah, Owen, Oyen, Ueda</p>
+    </div>
+  </div>
+</div>
+
+<?-- SLIDESHOW -->
+
+<div class="slideshow-container">
+	<h2>Good ole Memes, please enjoy:</h2>
+
+
+<div class="mySlides">
+  <img src="meme6.png" style="width:100%">
+ 
+</div>
+
+<div class="mySlides">
+  <img src="meme.jpeg" style="width:100%">
+  
+</div>
+
+<div class="mySlides">
+  <img src="meme7.png" style="width:100%">
+ 
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+ 
+</body>
+</html>
